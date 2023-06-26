@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 const mongoose = require('mongoose');
 const User = require('../models/User');
 
-const uri = 'mongodb+srv://Nuru:nkugwamark@cluster0.wta1djn.mongodb.net/?retryWrites=true&w=majority';
+const uri = '';
 
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 .then(() => console.log('Database Connected Successfully'))
@@ -43,7 +43,7 @@ router.post('/', async (req, res, next) => {
 
     jwt.sign(
       payload,
-      'b9a2b1d574ca7b43345213789e7607d3d30563e059cece1cd3bee27c9c1597e7',
+      '',
       { expiresIn: 360000 },
       (err, token) => {
         if (err) throw err;
