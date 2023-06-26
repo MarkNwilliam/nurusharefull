@@ -7,7 +7,7 @@ router.post('/', (req, res) => {
   const { token } = req.body;
 
   try {
-    jwt.verify(token, 'b9a2b1d574ca7b43345213789e7607d3d30563e059cece1cd3bee27c9c1597e7');
+    jwt.verify(token, '');
     res.json({ valid: true });
   } catch (err) {
     console.error(err.message);
