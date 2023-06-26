@@ -7,10 +7,10 @@ const Note = require('../models/Note');
 const router = express.Router();
 const upload = multer({ storage: multer.memoryStorage() });
 
-const blobSasUrl = 'https://nurushare.blob.core.windows.net/nurunotes?sp=racwdli&st=2023-06-20T23:43:03Z&se=2024-08-01T07:43:03Z&sv=2022-11-02&sr=c&sig=48zIDurWCHO%2BHMqPHlqfI7nPGTJVJvNS3Mkr2qtRWsE%3D';
+const blobSasUrl = '';
 const containerName = 'nurunotes';
 
-const uri = 'mongodb+srv://Nuru:nkugwamark@cluster0.wta1djn.mongodb.net/?retryWrites=true&w=majority';
+const uri = '';
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 router.post('/', upload.fields([{name: 'file', maxCount: 1}, {name: 'image', maxCount: 1}]), async (req, res) => {
